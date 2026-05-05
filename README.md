@@ -25,9 +25,9 @@ Sistema web desenvolvido para monitorar a validade de alimentos doados, auxilian
 
 ## 👥 Equipe
 
-- Nome 1
-- Nome 2
-- Nome 3
+- Caio 
+- Carlos
+- Erik
 
 ---
 
