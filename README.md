@@ -33,14 +33,33 @@ Sistema web desenvolvido para monitorar a validade de alimentos doados, auxilian
 
 ## 📂 Estrutura do Projeto
 
-src/
-├── app/
-│ ├── auth/
-│ ├── dashboard/
-│ ├── alimentos/
-│ ├── alertas/
-│ ├── shared/
-│ └── services/
+src/app/
+
+core/
+shared/
+
+pages/
+ ├── landing
+ ├── login
+ ├── register
+ ├── dashboard
+ ├── estoque
+ ├── alertas
+ ├── configuracoes
+ ├── doacoes
+ ├── alimento
+ ├── assinatura
+ └── vencimentos
+
+components/
+ ├── sidebar
+ ├── navbar
+ ├── card-alerta
+ ├── card-estoque
+ └── modal
+
+services/
+models/
 
 
 ---
