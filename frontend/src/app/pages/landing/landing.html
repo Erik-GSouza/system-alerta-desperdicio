@@ -1,1 +1,88 @@
-<p>landing works!</p>
+<!-- Navbar principal -->
+<nav class="navbar navbar-expand-lg navbar-dark px-4">
+
+  <!-- Logo -->
+  <a class="navbar-brand fw-bold" href="#">
+    Data Certa
+  </a>
+
+  <!-- Botão mobile -->
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#menuNavbar"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Itens da navbar -->
+  <div class="collapse navbar-collapse" id="menuNavbar">
+
+    <ul class="navbar-nav ms-auto align-items-center">
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/assinatura">
+          Sobre nós
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/assinatura">
+          Benefícios
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/funcionalidades">
+          Funcionalidades
+        </a>
+      </li>
+
+      <li class="nav-item ms-3">
+        <a class="btn btn-light rounded-pill px-4" routerLink="/login">
+          Entrar / Cadastrar
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+
+</nav>
+
+<!-- Seção principal -->
+<section class="hero-section">
+
+  <div class="container h-100">
+
+    <div class="row h-100 align-items-center">
+
+      <!-- Texto -->
+      <div class="col-lg-6 text-white">
+
+        <h1 class="display-3 fw-bold mb-4">
+          Reduza desperdícios.
+          <br>
+          Salve alimentos.
+        </h1>
+
+        <p class="lead mb-4">
+          Sistema inteligente para controle de validade,
+          estoque e alertas de alimentos.
+        </p>
+
+        <a
+          routerLink="/assinatura"
+          class="btn btn-light btn-lg rounded-pill px-5"
+        >
+          Acesse o Painel
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
