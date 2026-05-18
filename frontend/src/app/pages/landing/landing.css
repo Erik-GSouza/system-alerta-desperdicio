@@ -1,34 +1,236 @@
-/* Navbar */
-.navbar {
-  position: absolute;
-  width: 100%;
-  z-index: 10;
+/* Página inicial pública */
+
+.landing-page {
+  min-height: 100vh;
+  background-color: #f6f0d6;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Hero principal */
-.hero-section {
+/* Navbar superior */
+.navbar-area {
+  height: 70px;
+  padding: 0 60px;
+  background-color: #f6f0d6;
 
-  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo / nome */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #003d13;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.brand i {
+  font-size: 30px;
+}
+
+/* Links do menu */
+.menu-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.menu-links a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.menu-links a:hover {
+  color: #003d13;
+}
+
+/* Botão entrar/cadastrar */
+.btn-login {
+  border: 1px solid #333;
+  padding: 8px 20px;
+  border-radius: 25px;
+  background-color: transparent;
+}
+
+.btn-login:hover {
+  background-color: #003d13;
+  color: white !important;
+}
+
+/* Área principal clara */
+.hero-area {
+  position: relative;
+  min-height: 340px;
+  padding: 45px 40px 35px;
 
   background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url('https://images.unsplash.com/photo-1488459716781-31db52582fe9?q=80&w=2070');
+    radial-gradient(circle at left, rgba(214, 210, 58, 0.25), transparent 260px),
+    radial-gradient(circle at right, rgba(235, 180, 83, 0.25), transparent 220px),
+    #f6f0d6;
 
-  background-size: cover;
-  background-position: center;
+  text-align: center;
 }
 
-/* Links navbar */
-.nav-link {
-  color: white !important;
-  font-weight: 500;
-  margin-left: 15px;
+.hero-area h1 {
+  color: #003d13;
+  font-size: 54px;
+  font-weight: 900;
+  line-height: 1.25;
+  margin-bottom: 25px;
 }
 
-/* Hover links */
-.nav-link:hover {
-  color: #ffc107 !important;
+.hero-area p {
+  color: #111;
+  font-size: 24px;
+  font-weight: 600;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+/* Ícones redondos decorativos */
+.circle-icon {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+
+  background-color: rgba(244, 201, 130, 0.45);
+  color: #263f1f;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 36px;
+  position: absolute;
+}
+
+.left-icon {
+  left: 90px;
+  bottom: 40px;
+}
+
+.right-icon {
+  right: 90px;
+  bottom: 40px;
+}
+
+/* Área verde inferior */
+.features-area {
+  min-height: calc(100vh - 410px);
+  background:
+    radial-gradient(circle at left, rgba(168, 195, 54, 0.15), transparent 260px),
+    radial-gradient(circle at right, rgba(168, 195, 54, 0.15), transparent 260px),
+    #003d13;
+
+  padding: 45px 70px 20px;
+  text-align: center;
+}
+
+/* Container dos cards */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+/* Cards */
+.feature-card {
+  width: 260px;
+  min-height: 170px;
+  padding: 22px;
+
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(220, 230, 150, 0.5);
+  border-radius: 12px;
+
+  color: white;
+  text-align: left;
+}
+
+.feature-card i {
+  font-size: 36px;
+  color: #f6f0d6;
+  margin-bottom: 12px;
+}
+
+.feature-card h3 {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  color: #d7d7d7;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* Botão acesse o painel */
+.btn-panel {
+  display: inline-block;
+  background-color: #f3e0c2;
+  color: #334033;
+
+  padding: 12px 35px;
+  border-radius: 28px;
+
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+
+.btn-panel:hover {
+  background-color: white;
+  color: #003d13;
+}
+
+/* Rodapé */
+footer {
+  color: #d7d7d7;
+  font-size: 14px;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .navbar-area {
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .menu-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .hero-area h1 {
+    font-size: 36px;
+  }
+
+  .hero-area p {
+    font-size: 18px;
+  }
+
+  .circle-icon {
+    display: none;
+  }
+
+  .features-area {
+    padding: 35px 20px 20px;
+  }
+
+  .feature-card {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+  }
 }
