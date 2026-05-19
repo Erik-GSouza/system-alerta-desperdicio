@@ -1,1 +1,137 @@
-<p>estoque works!</p>
+<!-- Tela de estoque -->
+
+<section class="estoque-page">
+
+  <!-- Menu lateral -->
+  <app-sidebar></app-sidebar>
+
+  <!-- Conteúdo principal -->
+  <main class="estoque-content">
+
+    <!-- Topbar reutilizável -->
+    <app-topbar></app-topbar>
+
+    <!-- Cards de remessas -->
+    <section class="remessas-area">
+
+      <!-- Card para criar nova remessa -->
+      <a routerLink="/alimento" class="create-card">
+
+        <i class="bi bi-plus-lg"></i>
+
+        <div>
+          Criar novo item/
+          <br>
+          Adicionar Remessa
+        </div>
+
+      </a>
+
+      <!-- Cards vazios provisórios -->
+      <div class="remessa-card">
+
+        <div class="image-placeholder">
+          <i class="bi bi-pencil-fill"></i>
+        </div>
+
+        <div class="empty-label">
+          Nenhuma
+          <br>
+          Remessa criada
+          <br>
+          ainda
+        </div>
+
+      </div>
+
+      <div class="remessa-card">
+
+        <div class="image-placeholder">
+          <i class="bi bi-pencil-fill"></i>
+        </div>
+
+        <div class="empty-label">
+          Nenhuma
+          <br>
+          Remessa criada
+          <br>
+          ainda
+        </div>
+
+      </div>
+
+      <div class="remessa-card">
+
+        <div class="image-placeholder">
+          <i class="bi bi-pencil-fill"></i>
+        </div>
+
+        <div class="empty-label">
+          Nenhuma
+          <br>
+          Remessa criada
+          <br>
+          ainda
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Alternador visual -->
+    <div class="tabs-area">
+
+      <button class="tab active" type="button">
+        visão geral
+      </button>
+
+      <button class="tab" type="button">
+        Categorias
+      </button>
+
+    </div>
+
+    <!-- Lista inferior -->
+    <section class="estoque-list">
+
+      <div class="estoque-row">
+
+        <strong>(Nada ainda)</strong>
+
+        <div class="row-actions">
+          <a routerLink="/doacoes" class="donate-btn">Doar</a>
+
+          <button type="button" class="delete-btn">
+            <i class="bi bi-trash"></i>
+            Excluir
+          </button>
+        </div>
+
+      </div>
+
+      <div class="estoque-row">
+
+        <strong>(Nada ainda)</strong>
+
+        <div class="row-actions">
+          <a routerLink="/doacoes" class="donate-btn">Doar</a>
+
+          <button type="button" class="delete-btn">
+            <i class="bi bi-trash"></i>
+            Excluir
+          </button>
+        </div>
+
+      </div>
+
+      <div class="pagination-dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </section>
+
+  </main>
+
+</section>

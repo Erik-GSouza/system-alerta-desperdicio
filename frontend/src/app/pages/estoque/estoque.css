@@ -1,0 +1,295 @@
+/* Tela de estoque */
+
+.estoque-page {
+  min-height: 100vh;
+
+  display: flex;
+
+  background:
+    linear-gradient(
+      173deg,
+      #f6f0d6 0%,
+      #f6f0d6 84%,
+      #e8dcc0 84%,
+      #e8dcc0 100%
+    );
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Conteúdo principal */
+.estoque-content {
+  flex: 1;
+  padding: 24px 28px 28px;
+  overflow-y: auto;
+}
+
+/* Área dos cards */
+.remessas-area {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  gap: 28px;
+
+  margin-top: 35px;
+  margin-bottom: 28px;
+}
+
+/* Card criar novo item */
+.create-card {
+  min-height: 280px;
+
+  background-color: #416b35;
+  color: white;
+
+  border-radius: 8px;
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  gap: 35px;
+
+  padding: 20px;
+}
+
+.create-card i {
+  font-size: 86px;
+}
+
+.create-card div {
+  background-color: #d8dfcb;
+  color: #111;
+
+  padding: 12px 22px;
+  border-radius: 5px;
+
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.create-card:hover {
+  background-color: #35592b;
+  color: white;
+}
+
+/* Cards de remessa */
+.remessa-card {
+  min-height: 280px;
+
+  background-color: #cfd7bd;
+
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  padding: 20px;
+}
+
+/* Espaço da imagem */
+.image-placeholder {
+  width: 125px;
+  height: 125px;
+
+  background-color: #d9d9d9;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder i {
+  font-size: 42px;
+  color: #416b35;
+}
+
+/* Etiqueta laranja */
+.empty-label {
+  width: 150px;
+
+  background-color: #f28a0c;
+  color: white;
+
+  padding: 12px 10px;
+  border-radius: 5px;
+
+  text-align: center;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+/* Alternador visão geral/categorias */
+.tabs-area {
+  width: 380px;
+  height: 46px;
+
+  margin: 0 auto 34px;
+
+  display: flex;
+
+  background-color: #3f3f46;
+  border-radius: 28px;
+
+  overflow: hidden;
+
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.tab {
+  width: 50%;
+
+  border: none;
+
+  background-color: transparent;
+  color: #bfbfbf;
+
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.tab.active {
+  background-color: #d4d60a;
+  color: #000;
+
+  border-radius: 28px;
+}
+
+/* Lista inferior */
+.estoque-list {
+  background-color: white;
+
+  border-radius: 9px;
+
+  padding: 16px 18px 14px;
+
+  max-width: 100%;
+}
+
+.estoque-row {
+  min-height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 2px solid #eeeeee;
+}
+
+.estoque-row strong {
+  font-size: 19px;
+}
+
+.row-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Botão doar */
+.donate-btn {
+  background-color: #34b15a;
+  color: white;
+
+  padding: 6px 24px;
+
+  border-radius: 6px;
+
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.donate-btn:hover {
+  background-color: #2b9b4d;
+  color: white;
+}
+
+/* Botão excluir */
+.delete-btn {
+  border: none;
+  background-color: transparent;
+
+  color: #999;
+
+  font-size: 12px;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.delete-btn i {
+  font-size: 22px;
+}
+
+/* Bolinhas inferiores */
+.pagination-dots {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  padding-top: 16px;
+}
+
+.pagination-dots span {
+  width: 10px;
+  height: 10px;
+
+  background-color: #d9d9d9;
+  border-radius: 50%;
+}
+
+/* Responsividade */
+@media (max-width: 1150px) {
+  .remessas-area {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .estoque-page {
+    flex-direction: column;
+  }
+
+  .estoque-content {
+    padding: 22px;
+  }
+
+  .tabs-area {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .tab {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 620px) {
+  .remessas-area {
+    grid-template-columns: 1fr;
+  }
+
+  .create-card,
+  .remessa-card {
+    min-height: 230px;
+  }
+
+  .estoque-row {
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px 0;
+  }
+
+  .row-actions {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

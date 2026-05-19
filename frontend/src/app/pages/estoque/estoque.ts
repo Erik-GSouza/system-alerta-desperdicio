@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { Sidebar } from '../../components/sidebar/sidebar';
+import { Topbar } from '../../components/topbar/topbar';
 
 @Component({
   selector: 'app-estoque',
-  imports: [],
+  imports: [RouterLink, Sidebar, Topbar],
   templateUrl: './estoque.html',
-  styleUrl: './estoque.css',
+  styleUrl: './estoque.css'
 })
-export class Estoque {}
+export class Estoque {
+
+}
