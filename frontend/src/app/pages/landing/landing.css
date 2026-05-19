@@ -21,16 +21,13 @@
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-
-  color: #003d13;
-  font-size: 26px;
-  font-weight: bold;
   text-decoration: none;
 }
 
-.brand i {
-  font-size: 30px;
+.brand-logo {
+  height: 52px;
+  width: auto;
+  display: block;
 }
 
 /* Links do menu */
