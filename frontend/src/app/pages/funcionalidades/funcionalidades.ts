@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-funcionalidades',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './funcionalidades.html',
-  styleUrl: './funcionalidades.css',
+  styleUrl: './funcionalidades.css'
 })
-export class Funcionalidades {}
+export class Funcionalidades {
+
+}

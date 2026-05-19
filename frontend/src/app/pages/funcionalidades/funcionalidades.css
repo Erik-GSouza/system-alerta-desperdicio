@@ -1,0 +1,320 @@
+/* Tela de funcionalidades */
+
+.funcionalidades-page {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  background-color: #f6f0d6;
+  font-family: Arial, Helvetica, sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 80px 70px;
+}
+
+/* Forma verde grande do fundo */
+.funcionalidades-page::before {
+  content: "";
+  position: absolute;
+
+  width: 820px;
+  height: 820px;
+
+  left: -220px;
+  bottom: -260px;
+
+  background-color: #416b35;
+  border-radius: 50%;
+
+  z-index: 0;
+}
+
+/* Círculo claro decorativo no canto direito */
+.funcionalidades-page::after {
+  content: "";
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  right: -170px;
+  top: -120px;
+
+  background-color: rgba(91, 125, 67, 0.25);
+  border-radius: 50%;
+
+  z-index: 0;
+}
+
+/* Área dos cards da esquerda */
+.cards-area {
+  position: relative;
+  z-index: 1;
+
+  width: 58%;
+
+  display: grid;
+  grid-template-columns: repeat(2, 280px);
+  gap: 70px 45px;
+}
+
+/* Cards brancos */
+.info-card {
+  min-height: 225px;
+
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 10px;
+
+  padding: 26px 24px;
+  text-align: center;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.info-card i {
+  font-size: 48px;
+  color: #566026;
+  margin-bottom: 14px;
+}
+
+.info-card h3 {
+  color: #53551d;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.info-card p {
+  color: #222;
+  font-size: 20px;
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+
+.info-card span {
+  color: #53551d;
+  font-size: 16px;
+}
+
+/* Área direita */
+.user-area {
+  position: relative;
+  z-index: 1;
+
+  width: 38%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Decoração circular superior */
+.circle-decoration {
+  margin-bottom: 10px;
+}
+
+.circle-outer {
+  width: 230px;
+  height: 230px;
+
+  border: 2px solid rgba(65, 107, 53, 0.35);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-middle {
+  width: 150px;
+  height: 150px;
+
+  background-color: rgba(65, 107, 53, 0.18);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-inner {
+  width: 95px;
+  height: 95px;
+
+  background-color: #2f6334;
+  border: 18px solid #174c26;
+  border-radius: 50%;
+}
+
+/* Pergunta principal */
+.user-area h1 {
+  color: #000;
+  font-size: 38px;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.15;
+
+  margin-bottom: 26px;
+}
+
+/* Cards de ONG e restaurante */
+.user-option {
+  width: 430px;
+  min-height: 105px;
+
+  background-color: white;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 22px 18px;
+  margin-bottom: 38px;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.user-icon {
+  width: 54px;
+  height: 54px;
+
+  background-color: #f1f3dc;
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-icon i {
+  font-size: 31px;
+  color: #416b35;
+}
+
+.user-option strong {
+  font-size: 32px;
+  font-weight: 500;
+  flex: 1;
+  white-space: nowrap;
+}
+
+.restaurant-option strong {
+  font-size: 30px;
+}
+
+/* Botão selecionar */
+.select-btn {
+  background-color: #416b35;
+  color: white;
+
+  padding: 15px 20px;
+  border-radius: 18px;
+
+  text-decoration: none;
+  font-size: 16px;
+
+  flex-shrink: 0;
+}
+
+.select-btn:hover {
+  background-color: #2d4f24;
+  color: white;
+}
+
+.select-btn.dark {
+  background-color: #003d13;
+}
+
+.select-btn.dark:hover {
+  background-color: #00270c;
+}
+
+/* Responsividade */
+@media (max-width: 950px) {
+  .funcionalidades-page {
+    flex-direction: column;
+    padding: 35px 22px;
+    gap: 45px;
+  }
+
+  .cards-area {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .info-card {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .user-area {
+    width: 100%;
+  }
+
+  .circle-outer {
+    width: 180px;
+    height: 180px;
+  }
+
+  .circle-middle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .circle-inner {
+    width: 75px;
+    height: 75px;
+  }
+
+  .user-option {
+  width: 100%;
+  max-width: 430px;
+  padding: 20px;
+}
+
+.user-option strong {
+  font-size: 28px;
+}
+
+.restaurant-option strong {
+  font-size: 25px;
+}
+
+.select-btn {
+  padding: 13px 18px;
+  font-size: 15px;
+}
+
+  .user-area h1 {
+    font-size: 32px;
+  }
+}
+
+/* Ajuste para telas muito pequenas */
+@media (max-width: 500px) {
+  .user-option {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .user-option strong {
+    font-size: 28px;
+    white-space: normal;
+  }
+
+  .restaurant-option strong {
+    font-size: 26px;
+  }
+
+  .select-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
