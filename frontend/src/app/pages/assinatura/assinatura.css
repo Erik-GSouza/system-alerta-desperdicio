@@ -1,0 +1,245 @@
+/* Tela de assinatura / apresentação do app */
+
+.assinatura-page {
+  min-height: 100vh;
+  display: flex;
+  background-color: #003d13;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Área esquerda */
+.planos-area {
+  width: 42%;
+  min-height: 100vh;
+  padding: 65px 60px;
+
+  background:
+    linear-gradient(rgba(25, 25, 30, 0.93), rgba(25, 25, 30, 0.93));
+
+  color: #d8bc86;
+}
+
+/* Logo */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 42px;
+}
+
+.logo-area i {
+  font-size: 70px;
+}
+
+.logo-area h1 {
+  margin: 0;
+  font-size: 48px;
+  line-height: 0.9;
+  font-weight: 500;
+}
+
+.subtitulo {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* Comparativo */
+.comparativo {
+  width: 100%;
+  font-size: 14px;
+}
+
+.cabecalho-comparativo,
+.linha-plano {
+  display: grid;
+  grid-template-columns: 1fr 80px 100px;
+  align-items: center;
+  gap: 10px;
+}
+
+.cabecalho-comparativo {
+  color: #d8bc86;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.cabecalho-comparativo small {
+  display: block;
+  font-size: 10px;
+}
+
+.linha-plano {
+  border-bottom: 1px solid rgba(216, 188, 134, 0.18);
+  padding: 8px 0;
+}
+
+.linha-plano span:first-child {
+  text-transform: uppercase;
+  color: #c8b48a;
+}
+
+.linha-plano i {
+  margin-right: 6px;
+}
+
+.linha-plano span:not(:first-child) {
+  text-align: center;
+}
+
+/* Botões de plano */
+.botoes-planos {
+  display: flex;
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.botoes-planos button {
+  width: 155px;
+  height: 62px;
+  border-radius: 8px;
+  background-color: transparent;
+  font-size: 18px;
+  line-height: 1.1;
+}
+
+.btn-mensal {
+  border: none;
+  color: #d8bc86;
+}
+
+.btn-anual {
+  border: 1px solid #2fa35a;
+  color: #2fa35a;
+}
+
+.btn-anual:hover {
+  background-color: #2fa35a;
+  color: white;
+}
+
+/* Link voltar */
+.voltar-link {
+  display: inline-block;
+  margin-top: 35px;
+  color: #d8bc86;
+  text-decoration: none;
+}
+
+.voltar-link:hover {
+  color: white;
+}
+
+/* Área direita */
+.info-area {
+  width: 58%;
+  min-height: 100vh;
+  padding: 60px 55px;
+
+  background:
+    radial-gradient(circle at top left, rgba(177, 210, 80, 0.24), transparent 250px),
+    radial-gradient(circle at bottom left, rgba(177, 210, 80, 0.22), transparent 260px),
+    radial-gradient(circle at top right, rgba(177, 210, 80, 0.24), transparent 280px),
+    #0d4a22;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card de texto */
+.info-card {
+  width: 100%;
+  max-width: 560px;
+  max-height: 82vh;
+  overflow-y: auto;
+
+  background-color: rgba(30, 48, 31, 0.88);
+  color: white;
+
+  padding: 32px;
+  border-radius: 28px;
+  border: 8px solid rgba(5, 58, 22, 0.55);
+}
+
+.info-card h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.info-card p {
+  font-size: 16px;
+  line-height: 1.35;
+  margin-bottom: 22px;
+}
+
+.info-card h3 {
+  font-size: 19px;
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+
+.info-card ul {
+  padding-left: 20px;
+}
+
+.info-card li {
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+/* Link continuar */
+.continuar-link {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.continuar-link i {
+  font-size: 22px;
+}
+
+/* Responsividade */
+@media (max-width: 950px) {
+  .assinatura-page {
+    flex-direction: column;
+  }
+
+  .planos-area,
+  .info-area {
+    width: 100%;
+    min-height: auto;
+    padding: 35px 24px;
+  }
+
+  .logo-area h1 {
+    font-size: 38px;
+  }
+
+  .logo-area i {
+    font-size: 54px;
+  }
+
+  .cabecalho-comparativo,
+  .linha-plano {
+    grid-template-columns: 1fr 65px 80px;
+    font-size: 12px;
+  }
+
+  .botoes-planos {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .info-card {
+    max-height: none;
+  }
+}
