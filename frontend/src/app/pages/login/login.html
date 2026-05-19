@@ -1,1 +1,82 @@
-<p>login works!</p>
+<!-- Tela de login Data Certa -->
+
+<section class="login-page">
+
+    <!-- Lado esquerdo reservado para o background final do Figma -->
+    <div class="left-side">
+    </div>
+
+    <!-- Lado direito com formulário -->
+    <div class="right-side">
+
+        <div class="login-card">
+
+        <!-- Ícone do usuário -->
+        <div class="user-avatar">
+            <i class="bi bi-person-fill"></i>
+        </div>
+
+        <h2>Cadastre-se aqui</h2>
+
+        <!-- Campo email -->
+        <div class="input-group-custom">
+        <i class="bi bi-envelope"></i>
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            autocomplete="email"
+        >
+        </div>
+
+        <!-- Campo senha -->
+        <div class="input-group-custom">
+        <i class="bi bi-lock"></i>
+
+        <input
+            type="password"
+            id="senha"
+            name="senha"
+            placeholder="Senha"
+            autocomplete="current-password"
+        >
+
+        <i class="bi bi-eye eye-icon"></i>
+        </div>
+
+        <a href="#" class="forgot-link">
+            Eita, esqueci a senha
+        </a>
+
+        <div class="or-text">
+            Ou
+        </div>
+
+        <!-- Botões sociais apenas visuais por enquanto -->
+        <button class="social-button facebook-button">
+            <i class="bi bi-facebook"></i>
+            Conecte com Facebook
+        </button>
+
+        <button class="social-button google-button">
+            <i class="bi bi-google"></i>
+            Conecte com Google
+        </button>
+
+        <!-- "Continuar" leva para a tela inicial após login -->
+        <a routerLink="/dashboard" class="continue-button">
+            Continuar
+        </a>
+
+        <p class="register-text">
+            NÃO TEM UMA CONTA?
+            <a routerLink="/cadastro">CRIAR UMA NOVA CONTA.</a>
+        </p>
+
+        </div>
+
+    </div>
+
+</section>
