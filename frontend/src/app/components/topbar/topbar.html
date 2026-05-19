@@ -1,0 +1,38 @@
+<!-- Barra superior das telas internas -->
+
+<header class="topbar">
+
+  <!-- Campo de busca apenas visual por enquanto -->
+  <div class="search-box">
+    <i class="bi bi-search"></i>
+
+    <input
+      type="text"
+      placeholder="Encontrar doador/item..."
+      id="search"
+      name="search"
+    >
+  </div>
+
+  <div class="topbar-actions">
+
+    <!-- Avatar do usuário -->
+    <button class="user-button" type="button">
+      <i class="bi bi-person-fill"></i>
+    </button>
+
+    <!-- Sino de notificação -->
+    <button class="notification-button" type="button">
+      <i class="bi bi-bell-fill"></i>
+      <span></span>
+    </button>
+
+    <!-- Botão de estoque -->
+    <a routerLink="/estoque" class="stock-button">
+      Itens no<br>
+      estoque
+    </a>
+
+  </div>
+
+</header>

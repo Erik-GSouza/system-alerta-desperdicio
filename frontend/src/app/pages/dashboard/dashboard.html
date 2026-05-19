@@ -1,1 +1,144 @@
-<p>dashboard works!</p>
+<!-- Tela inicial após login -->
+
+<section class="dashboard-page">
+
+  <!-- Menu lateral -->
+  <app-sidebar></app-sidebar>
+
+  <!-- Conteúdo principal -->
+  <main class="dashboard-content">
+
+    <!-- Topbar reutilizável -->
+    <app-topbar></app-topbar>
+
+    <h1 class="page-title">
+      Data Certa - sistema de alarme de desperdício
+    </h1>
+
+    <!-- Cards de status -->
+    <section class="status-area">
+
+      <a routerLink="/alertas" class="status-card red-card">
+        <div class="status-icon">
+          <i class="bi bi-exclamation-triangle"></i>
+        </div>
+
+        <div>
+          <h2>Urgente<br>(Nada ainda)</h2>
+          <strong>0 Itens</strong>
+        </div>
+      </a>
+
+      <a routerLink="/estoque" class="status-card green-card">
+        <div class="status-icon light">
+          <i class="bi bi-shield-check"></i>
+        </div>
+
+        <div>
+          <h2>Seguro no estoque</h2>
+          <strong>0 itens</strong>
+        </div>
+
+        <i class="bi bi-check-circle-fill check-icon"></i>
+      </a>
+
+      <a routerLink="/vencimentos" class="status-card orange-card">
+        <div class="status-icon urgent">
+          <i class="bi bi-exclamation-circle"></i>
+        </div>
+
+        <div>
+          <h2>Urgente<br>(Nada ainda)</h2>
+          <strong>0 Itens</strong>
+        </div>
+      </a>
+
+    </section>
+
+    <hr>
+
+    <h2 class="section-title">Ações Rápidas</h2>
+
+    <!-- Ações rápidas -->
+    <section class="actions-area">
+
+      <a routerLink="/alimento" class="create-stock-card">
+        <i class="bi bi-plus-lg"></i>
+
+        <span>
+          CRIAR ESTOQUE/<br>
+          NOVA REMESSA
+        </span>
+      </a>
+
+      <div class="actions-column">
+
+        <a routerLink="/doacoes" class="small-action orange-action">
+          <i class="bi bi-geo-alt-fill"></i>
+          Encontrar doador
+        </a>
+
+        <a routerLink="/doacoes" class="small-action green-action">
+          <i class="bi bi-flower1"></i>
+
+          <span>
+           Reduzir<br>
+           desperdício/Doar
+          </span>
+        </a>
+
+      </div>
+
+      <a routerLink="/assinatura" class="subscribe-card">
+        <i class="bi bi-clipboard-heart"></i>
+
+        <div>
+          <strong>Assinar o app</strong>
+          <span>Ganhe benefícios dentro do app</span>
+        </div>
+      </a>
+
+    </section>
+
+    <!-- Próximos do vencimento -->
+    <section class="expiring-panel">
+
+      <h2>Próximos do vencimento</h2>
+
+      <div class="expiring-row">
+        <strong>(Nada ainda)</strong>
+
+        <div class="row-actions">
+          <a routerLink="/doacoes" class="donate-btn">Doar</a>
+
+          <button type="button" class="delete-btn">
+            <i class="bi bi-trash"></i>
+            Excluir
+          </button>
+        </div>
+      </div>
+
+      <div class="expiring-row">
+        <strong>(Nada ainda)</strong>
+
+        <div class="row-actions">
+          <a routerLink="/doacoes" class="donate-btn">Doar</a>
+
+          <button type="button" class="delete-btn">
+            <i class="bi bi-trash"></i>
+            Excluir
+          </button>
+        </div>
+      </div>
+
+      <div class="pagination-dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </section>
+
+  </main>
+
+</section>

@@ -1,0 +1,407 @@
+/* Tela dashboard / home interna */
+
+.dashboard-page {
+  min-height: 100vh;
+
+  display: flex;
+
+  background:
+    linear-gradient(
+      173deg,
+      #f6f0d6 0%,
+      #f6f0d6 84%,
+      #e8dcc0 84%,
+      #e8dcc0 100%
+    );
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Conteúdo principal */
+.dashboard-content {
+  flex: 1;
+
+  padding: 24px 28px 28px;
+
+  overflow-y: auto;
+}
+
+/* Título */
+.page-title {
+  color: #000;
+
+  font-size: 31px;
+  font-weight: 900;
+
+  margin: 20px 0 14px;
+}
+
+/* Área dos cards de status */
+.status-area {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr 1fr;
+  gap: 25px;
+
+  margin-bottom: 30px;
+}
+
+/* Cards principais */
+.status-card {
+  min-height: 135px;
+
+  border-radius: 9px;
+  padding: 24px;
+
+  color: white;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  gap: 28px;
+
+  position: relative;
+}
+
+.status-card:hover {
+  filter: brightness(0.97);
+  color: white;
+}
+
+.status-card h2 {
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.status-card strong {
+  font-size: 20px;
+}
+
+/* Cores dos cards */
+.red-card {
+  background-color: #c92222;
+}
+
+.green-card {
+  background-color: #379347;
+}
+
+.orange-card {
+  background-color: #f28a0c;
+}
+
+/* Ícones dos cards */
+.status-icon {
+  width: 78px;
+  height: 78px;
+
+  background-color: white;
+  color: #c92222;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 44px;
+}
+
+.status-icon.light {
+  color: #379347;
+}
+
+.status-icon.urgent {
+  color: #f28a0c;
+  border: 6px solid rgba(255, 255, 255, 0.75);
+}
+
+.check-icon {
+  position: absolute;
+
+  right: 28px;
+  bottom: 25px;
+
+  color: #000;
+  font-size: 36px;
+}
+
+/* Linha separadora */
+hr {
+  border: none;
+  border-top: 3px solid rgba(0, 0, 0, 0.12);
+  margin: 0 0 12px;
+}
+
+/* Títulos das seções */
+.section-title {
+  font-size: 28px;
+  font-weight: 900;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+/* Área de ações rápidas */
+.actions-area {
+  display: grid;
+  grid-template-columns: 1.55fr 0.85fr 1fr;
+  gap: 16px;
+
+  margin-bottom: 14px;
+}
+
+/* Criar estoque */
+.create-stock-card {
+  min-height: 120px;
+
+  background-color: #416b35;
+  color: white;
+
+  border-radius: 9px;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+
+.create-stock-card i {
+  font-size: 70px;
+}
+
+.create-stock-card span {
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.create-stock-card:hover {
+  background-color: #35592b;
+  color: white;
+}
+
+/* Coluna de ações pequenas */
+.actions-column {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.small-action {
+  min-height: 55px;
+
+  border-radius: 9px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+
+  padding: 0 14px;
+}
+
+.small-action span {
+  line-height: 1.1;
+}
+
+.green-action {
+  gap: 8px;
+}
+
+.green-action i {
+  flex-shrink: 0;
+}
+
+.orange-action {
+  background-color: #f28a0c;
+}
+
+.green-action {
+  background-color: #2f9b43;
+}
+
+.small-action:hover {
+  filter: brightness(0.95);
+  color: white;
+}
+
+/* Card assinatura */
+.subscribe-card {
+  min-height: 120px;
+
+  background-color: #f5f5f7;
+  color: #000;
+
+  border-radius: 9px;
+  text-decoration: none;
+
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.subscribe-card i {
+  font-size: 55px;
+  color: #555;
+}
+
+.subscribe-card strong {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.subscribe-card span {
+  display: block;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.subscribe-card:hover {
+  background-color: #eeeeee;
+  color: #000;
+}
+
+/* Painel de vencimentos */
+.expiring-panel {
+  background-color: white;
+
+  border-radius: 9px;
+
+  padding: 10px 18px 14px;
+
+  margin-top: 8px;
+}
+
+.expiring-panel h2 {
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.expiring-row {
+  min-height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 2px solid #eeeeee;
+}
+
+.expiring-row strong {
+  font-size: 19px;
+}
+
+.row-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.donate-btn {
+  background-color: #34b15a;
+  color: white;
+
+  padding: 6px 24px;
+
+  border-radius: 6px;
+
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.donate-btn:hover {
+  background-color: #2b9b4d;
+  color: white;
+}
+
+.delete-btn {
+  border: none;
+  background-color: transparent;
+
+  color: #999;
+
+  font-size: 12px;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.delete-btn i {
+  font-size: 22px;
+}
+
+/* Bolinhas inferiores */
+.pagination-dots {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  padding-top: 12px;
+}
+
+.pagination-dots span {
+  width: 10px;
+  height: 10px;
+
+  background-color: #d9d9d9;
+  border-radius: 50%;
+}
+
+/* Responsividade */
+@media (max-width: 1150px) {
+  .status-area {
+    grid-template-columns: 1fr;
+  }
+
+  .actions-area {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .dashboard-page {
+    flex-direction: column;
+  }
+
+  .dashboard-content {
+    padding: 22px;
+  }
+
+  .page-title {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .status-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .check-icon {
+    position: static;
+  }
+
+  .expiring-row {
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px 0;
+  }
+
+  .row-actions {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,42 @@
+<!-- Menu lateral das telas internas -->
+
+<aside class="sidebar">
+
+  <!-- Logo -->
+  <a routerLink="/dashboard" class="sidebar-logo">
+    <img
+      src="/icons/logotipo-verde.svg"
+      alt="Logo Data Certa"
+    >
+  </a>
+
+  <!-- Links do menu -->
+  <nav class="sidebar-menu">
+
+    <a
+      routerLink="/dashboard"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <i class="bi bi-house-fill"></i>
+      <span>Home</span>
+    </a>
+
+    <a routerLink="/estoque" routerLinkActive="active">
+      <i class="bi bi-box-fill"></i>
+      <span>Estoque</span>
+    </a>
+
+    <a routerLink="/alertas" routerLinkActive="active">
+      <i class="bi bi-exclamation-triangle-fill"></i>
+      <span>Alertas</span>
+    </a>
+
+    <a routerLink="/configuracoes" routerLinkActive="active">
+      <i class="bi bi-gear-fill"></i>
+      <span>Configurações</span>
+    </a>
+
+  </nav>
+
+</aside>
