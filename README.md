@@ -38,6 +38,7 @@ src/app/
 core/
 shared/
 
+```
 pages/
  ├── landing
  ├── login
@@ -60,7 +61,7 @@ components/
 
 services/
 models/
-
+```
 
 ---
 
