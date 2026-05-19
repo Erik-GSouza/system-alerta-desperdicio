@@ -1,1 +1,84 @@
-<p>alertas works!</p>
+<!-- Tela de alertas -->
+
+<section class="alertas-page">
+
+  <!-- Menu lateral -->
+  <app-sidebar></app-sidebar>
+
+  <!-- Conteúdo principal -->
+  <main class="alertas-content">
+
+    <!-- Topbar reutilizável -->
+    <app-topbar></app-topbar>
+
+    <h1 class="page-title">
+      Data certa - sistema de alarme de desperdício
+    </h1>
+
+    <!-- Ícone grande de alerta -->
+    <div class="alert-icon-area">
+      <i class="bi bi-exclamation-triangle-fill"></i>
+    </div>
+
+    <!-- Painel principal de alertas -->
+    <section class="alerts-panel">
+
+      <!-- Linhas de status -->
+      <div class="alert-status-row yellow-row">
+        <div class="status-left">
+          <i class="bi bi-exclamation-triangle-fill"></i>
+          <span>Item perto do vencimento</span>
+        </div>
+
+        <strong>0</strong>
+      </div>
+
+      <div class="alert-status-row red-row">
+        <div class="status-left">
+          <i class="bi bi-exclamation-triangle-fill"></i>
+          <span>Validade Expirada</span>
+        </div>
+
+        <strong>0</strong>
+      </div>
+
+      <div class="alert-status-row green-row">
+        <div class="status-left">
+          <i class="bi bi-check-lg"></i>
+          <span>Item salvo</span>
+        </div>
+
+        <strong>0</strong>
+      </div>
+
+      <!-- Botões principais -->
+      <div class="alert-buttons">
+
+        <a routerLink="/estoque" class="btn-alert blue-button">
+          Ver estoque
+        </a>
+
+        <a routerLink="/vencimentos" class="btn-alert gray-button">
+          Ver Remessas vencidas
+        </a>
+
+      </div>
+
+      <!-- Ações recomendadas -->
+      <div class="recommended-actions">
+
+        <h2>Ações Recomendadas</h2>
+
+        <p>
+          Nenhuma ação recomendada no momento.
+          Quando houver alimentos próximos do vencimento ou vencidos,
+          as sugestões aparecerão aqui.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</section>
