@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { Sidebar } from '../../components/sidebar/sidebar';
+import { Topbar } from '../../components/topbar/topbar';
 
 @Component({
   selector: 'app-vencimentos',
-  imports: [],
+  imports: [RouterLink, Sidebar, Topbar],
   templateUrl: './vencimentos.html',
-  styleUrl: './vencimentos.css',
+  styleUrl: './vencimentos.css'
 })
-export class Vencimentos {}
+export class Vencimentos {
+
+}
