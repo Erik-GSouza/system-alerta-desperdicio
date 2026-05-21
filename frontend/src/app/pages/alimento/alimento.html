@@ -11,117 +11,237 @@
     <!-- Topbar reutilizável -->
     <app-topbar></app-topbar>
 
-    <!-- Tela de cadastro -->
-<div class="card-alimento">
+    <!-- Área principal -->
+    <div class="estoque-wrapper">
 
-  <input
-    type="text"
-    placeholder="Nome do alimento"
-    class="input-nome"
-  />
+      <!-- topo -->
+      <div class="topo-alimento">
 
-  <div class="linha-campos">
+        <!-- nome -->
+        <div class="nome-area">
 
-    <div class="campo">
-      <label>Peso total:</label>
-      <input type="text" placeholder="Kg">
-    </div>
+          <input
+            type="text"
+            placeholder="Nome do Alimento"
+            class="input-nome"
+          />
 
-    <div class="campo">
-      <label>Quantidade:</label>
-      <input type="number" placeholder="Un.">
-    </div>
+          <button class="btn-mini-scan">
 
-    <div class="campo">
-      <label>Unidade de medida:</label>
+            <i class="bi bi-upc-scan"></i>
 
-      <select>
-        <option>Selecione</option>
-        <option>Kg</option>
-        <option>Litro</option>
-        <option>Unidade</option>
-      </select>
-    </div>
+          </button>
 
-  </div>
+        </div>
 
-  <div class="conteudo-remessa">
+      </div>
 
-    <!-- Categorias -->
-    <div class="categorias">
+      <!-- card escuro -->
+      <div class="card-remessa">
 
-      <h3>Categorias</h3>
+        <!-- parte superior -->
+        <div class="linha-top">
 
-      <button class="ativo">
-        Perecível
-      </button>
+          <!-- categorias -->
+          <div class="categorias">
 
-      <button>
-        Não Perecível
-      </button>
+            <span class="titulo-categoria">
+              Categorias
+            </span>
 
-    </div>
+          </div>
 
-    <!-- Detalhes -->
-    <div class="detalhes">
+          <!-- peso -->
+          <div class="campo-top">
 
-      <h3>DETALHES DA REMESSA</h3>
+            <label>Peso total:</label>
 
-      <div class="grid-remessa">
+            <input type="text" placeholder="Kg">
 
-        <input
-          type="text"
-          placeholder="Identificador de lote"
-        >
+          </div>
 
-        <input
-          type="date"
-        >
+          <!-- quantidade -->
+          <div class="campo-top">
 
-        <input
-          type="date"
-        >
+            <label>Quantidade:</label>
 
-        <input
-          type="date"
-        >
+            <input type="text" placeholder="Un.">
+
+          </div>
+
+          <!-- unidade -->
+          <div class="campo-top">
+
+            <label>Unidade de medida:</label>
+
+            <select>
+              <option>Select</option>
+            </select>
+
+          </div>
+
+        </div>
+
+        <!-- linha inferior -->
+        <div class="linha-bottom">
+
+          <!-- botões -->
+          <div class="categoria-botoes">
+
+            <button class="categoria ativo">
+              Perecível
+            </button>
+
+            <button class="categoria">
+              Não Perecível
+            </button>
+
+          </div>
+
+          <!-- remessa -->
+          <div class="detalhes-remessa">
+
+            <!-- titulo -->
+            <div class="titulo-remessa">
+
+              <div class="linha"></div>
+
+              <span>DETALHES DA REMESSA</span>
+
+              <div class="linha"></div>
+
+            </div>
+
+            <!-- grid -->
+            <div class="grid-remessa">
+
+              <!-- lote -->
+              <div class="campo-remessa">
+
+                <label>Identificador de lote</label>
+
+                <div class="input-icon">
+
+                  <i class="bi bi-tag"></i>
+
+                  <input type="text">
+
+                </div>
+
+              </div>
+
+              <!-- data -->
+              <div class="campo-remessa">
+
+                <label>Data de lote:</label>
+
+                <div class="input-icon">
+
+                  <i class="bi bi-calendar-event"></i>
+
+                  <input type="date">
+
+                </div>
+
+              </div>
+
+              <!-- entrada -->
+              <div class="campo-remessa">
+
+                <label>Data de entrada:</label>
+
+                <div class="input-icon">
+
+                  <i class="bi bi-calendar-event"></i>
+
+                  <input type="date">
+
+                </div>
+
+              </div>
+
+              <!-- validade -->
+              <div class="campo-remessa">
+
+                <label>Prazo de vencimento estimado:</label>
+
+                <div class="input-icon">
+
+                  <i class="bi bi-calendar-event"></i>
+
+                  <input type="date">
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- footer -->
+      <div class="footer-estoque">
+
+        <!-- scanner -->
+        <button class="scanner-box">
+
+          <i class="bi bi-upc-scan"></i>
+
+          <span>
+            Escanear <br>
+            produto
+          </span>
+
+        </button>
+
+        <!-- status -->
+        <div class="status-scan">
+
+          Nenhum item escaneado
+
+        </div>
+
+        <!-- limpar -->
+        <button class="btn-limpar">
+
+          <i class="bi bi-trash3"></i>
+
+          <span>
+            Limpar <br>
+            campos
+          </span>
+
+        </button>
+
+      </div>
+
+      <!-- ações -->
+      <div class="acoes">
+
+        <button class="btn-confirmar">
+
+          <i class="bi bi-check-circle"></i>
+
+          Confirmar
+
+        </button>
+
+        <button class="btn-cancelar">
+
+          <i class="bi bi-x-circle"></i>
+
+          Cancelar
+
+        </button>
 
       </div>
 
     </div>
 
-  </div>
-
-  <!-- Área inferior -->
-  <div class="area-acoes">
-
-    <button class="btn-scan">
-      Escanear produto
-    </button>
-
-    <div class="scan-status">
-      Nenhum item escaneado
-    </div>
-
-    <button class="btn-limpar">
-      Limpar campos
-    </button>
-
-  </div>
-
-  <div class="footer-botoes">
-
-    <button class="btn-confirmar">
-      Confirmar
-    </button>
-
-    <button class="btn-cancelar">
-      Cancelar
-    </button>
-
-  </div>
-
-</div>
-
   </main>
+
 </section>
