@@ -1,0 +1,127 @@
+<!-- Tela de Criar Estoque -->
+
+<section class="alimento-page">
+
+  <!-- Menu lateral -->
+  <app-sidebar></app-sidebar>
+
+  <!-- Conteúdo principal -->
+  <main class="alimento-content">
+
+    <!-- Topbar reutilizável -->
+    <app-topbar></app-topbar>
+
+    <!-- Tela de cadastro -->
+<div class="card-alimento">
+
+  <input
+    type="text"
+    placeholder="Nome do alimento"
+    class="input-nome"
+  />
+
+  <div class="linha-campos">
+
+    <div class="campo">
+      <label>Peso total:</label>
+      <input type="text" placeholder="Kg">
+    </div>
+
+    <div class="campo">
+      <label>Quantidade:</label>
+      <input type="number" placeholder="Un.">
+    </div>
+
+    <div class="campo">
+      <label>Unidade de medida:</label>
+
+      <select>
+        <option>Selecione</option>
+        <option>Kg</option>
+        <option>Litro</option>
+        <option>Unidade</option>
+      </select>
+    </div>
+
+  </div>
+
+  <div class="conteudo-remessa">
+
+    <!-- Categorias -->
+    <div class="categorias">
+
+      <h3>Categorias</h3>
+
+      <button class="ativo">
+        Perecível
+      </button>
+
+      <button>
+        Não Perecível
+      </button>
+
+    </div>
+
+    <!-- Detalhes -->
+    <div class="detalhes">
+
+      <h3>DETALHES DA REMESSA</h3>
+
+      <div class="grid-remessa">
+
+        <input
+          type="text"
+          placeholder="Identificador de lote"
+        >
+
+        <input
+          type="date"
+        >
+
+        <input
+          type="date"
+        >
+
+        <input
+          type="date"
+        >
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Área inferior -->
+  <div class="area-acoes">
+
+    <button class="btn-scan">
+      Escanear produto
+    </button>
+
+    <div class="scan-status">
+      Nenhum item escaneado
+    </div>
+
+    <button class="btn-limpar">
+      Limpar campos
+    </button>
+
+  </div>
+
+  <div class="footer-botoes">
+
+    <button class="btn-confirmar">
+      Confirmar
+    </button>
+
+    <button class="btn-cancelar">
+      Cancelar
+    </button>
+
+  </div>
+
+</div>
+
+  </main>
+</section>
